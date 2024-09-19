@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.contenedor{ /*- - - PADRE - - -*/
+    background-color: #373E40;
+    padding: 10px;
+
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+    display: grid;
+    grid-gap: 30px;
+    
+    /*grid template  areas
+    ----> Permite definir la grilla de trabajo utilziando los nombres de las clases
+    que hemos definido en el index.
+    Separados poe comillas, tabulaciones ponemoos el contenido
+    */
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    /*maquetamos en el orden solicitado*/
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "section section1 ads"
+    "footer footer footer"
+    ;
+}
+.contenedor .header{
+    background-color: #305252;
+    grid-column: header; /* COMO EL PRINCIPIO Y EL FINAL SOLO UTILIZAMOS HEADDER, SI NO TENDRIAMOS  QUE PONER EL INICIO Y EL FINAL*/
+}
+.contenedor .nav{
+    background-color: #77878B;
+    grid-column: nav;
+}
+.contenedor .section{
+    background-color: #488286;
+    grid-column: section;
+}
+.contenedor .section1{
+    background-color: #488286;
+    grid-column: section1;
+}
+.contenedor .ads{
+    background-color: #488286;
+    grid-column: ads;
+}
+.contenedor .footer{
+    background-color: #305252;
+    grid-column: footer;
+}
+.contenedor .ads .publicidad{
+    background-color: #373E40;
+    margin: 20px;
+}
